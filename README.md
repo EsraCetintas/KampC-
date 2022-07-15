@@ -1,4 +1,4 @@
-# Kamp1
+# Kamp2
 Değişkenler, veri tutuculardır. Verileri değişkenler ile yönetiriz.
 
 C#'ta type safety vardır. Yani değişkenin ne tip olduğu yazılmalıdır.
@@ -18,4 +18,11 @@ Classları birden fazla veriyi tutmak için kullanırız temel amaç budur.
 .cs uzantılı dosyalar c#'a karşılık gelir.
 
 Main fonksiyonu, ayağa kalkan ilk fonksiyondur. İşletim sistemiyle iletişime geçen fonksiyondur. Sadece bir tane vardır. Program.cs dosyası içindedir.
+
+#Kamp3
+Eğer ki bir bir kod bloğunu tekrar tekrar kullanıcaksam fonksiyon şeklinde yazmalıyım. Clean Code'da fonksiyon da satır sayısı en fazla  15 olmalı.
+
+Manager,Controller, Service gibi isimlendirmeler operasyon sınıflarının olduğunu belirtir.
+
+Naming Convantion, yazım kuralıdır. Class isimleri, proje isimleri, metot isimleri pascal case yani harfler buyuk yazılır. Camel case'te ise ilk harf kuçüktür. Bu da public olmayanlar için kullanılır.
 
