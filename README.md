@@ -33,5 +33,11 @@ New sözcüğü bellekte yeni bir adres oluştur demek.
 
 <h2> Kamp4 </h2>
 
+Foreign Key, Primary keyden sonra gelen anahtardır. Örneğin categoryId verilebilir. Başka tablodan veri tutar çünkü. Primary keyden sonra gelir.
 
+Entity, bizim nesne modellerimizdir. Bu classlarda sadece özellik yani prop property olur.
+
+CRUD ----> EKLE, SİL, GÜNCELLE, LİSTELE
+
+C# küçük - büyük harf duyarlıdır. Yani case sensetivedir.
 
