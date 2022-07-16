@@ -41,3 +41,29 @@ CRUD ----> EKLE, SİL, GÜNCELLE, LİSTELE
 
 C# küçük - büyük harf duyarlıdır. Yani case sensetivedir.
 
+ public void Add(Product product)
+        {
+            Console.WriteLine(product.ProductName);
+        }
+
+Product p1 = new Product();
+            p1.Id = 1;
+            p1.ProductName = "Koltuk";
+            p1.UnitPrice = 500;
+            p1.UnitsInStock = 3;
+            p1.Aciklama = "Tekli Koltuk"
+
+
+ProductManager manager = new ProductManager();
+            manager.Add(p1);
+            
+ şimdi ben burda p1 Productını gönderirken p1'in referansını gönderiyorum aslında. Ama değer tiplerde sadece değeri gönderiyorum. Diyelim ki p1'in heapte adresi 101. Ben fonskiyona 101i gönderiyprum aslında. Fonskiyondaki prodıcta diyorum ki p1'in işaret ettiği adresi sen de göster artık. O yüzden parametreeki productta değişiklik yapsa p1'de işaret ettikleri yerdeki nesne değerleri değişir.
+ 
+ Birde bunu unutma fonskiyonlardaki değişken veya parametreler farklıdır.
+ 
+ Fonksiyon sonucundaki değeri başka yerde kullanmak istersem geri dönüş tipi void olmamalıdır.
+ 
+ #Koleksiyonlar
+ 
+ Dizilere sonradan eleman ekleyemiyoruz. Yani genişletemiyoruz. C#'ta gerçek hayatta çok diziler kullanılmaz. Bu yüzden koleksiyonlar vardır.
+ control+k+c seçtiğin satıları yorum satırına alır. control+k+u seçili satırları yorum satırından çıkarır.
