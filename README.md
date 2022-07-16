@@ -19,7 +19,7 @@ Classları birden fazla veriyi tutmak için kullanırız temel amaç budur.
 
 Main fonksiyonu, ayağa kalkan ilk fonksiyondur. İşletim sistemiyle iletişime geçen fonksiyondur. Sadece bir tane vardır. Program.cs dosyası içindedir.
 
-#Kamp3
+<h2> Kamp3 </h2>
 
 Eğer ki bir bir kod bloğunu tekrar tekrar kullanıcaksam fonksiyon şeklinde yazmalıyım. Clean Code'da fonksiyon da satır sayısı en fazla  15 olmalı.
 
@@ -30,4 +30,8 @@ Naming Convantion, yazım kuralıdır. Class isimleri, proje isimleri, metot isi
 Değişkenler 2'ye ayrılır. Değer tipleri ve referans tileri olmak üzere. Int, float, decimal, double değer tiplere örnektir. Array, class, List, string referans tipe örnketir. Stack'te değer tipler ve değerleri tutulur. Ayrıca stack'te referans tiplerin referans noktaları tutulur. Bu referans noktalar ise heap'te nesnelerin adresini tutar. Yani orayı işaret eder.
 
 New sözcüğü bellekte yeni bir adres oluştur demek.
+
+<h2> Kamp4 </h2>
+
+
 
