@@ -66,4 +66,7 @@ ProductManager manager = new ProductManager();
  #Koleksiyonlar
  
  Dizilere sonradan eleman ekleyemiyoruz. Yani genişletemiyoruz. C#'ta gerçek hayatta çok diziler kullanılmaz. Bu yüzden koleksiyonlar vardır.
- control+k+c seçtiğin satıları yorum satırına alır. control+k+u seçili satırları yorum satırından çıkarır.
+ control+k+c seçtiğin satıları yorum satırına alır. control+k+u seçili satırları yorum satırından çıkarır. 
+ 
+ Koeksiyonlar generik ve generik olmayan olarak 2'ye ayrılır. Generic yapılar her tipe uyum sağlaması için bir şablon oluşturmak için kullanılır. Örneğin List<int> =new List<int>() bu generic yapıalra bir örnektir. Sınıflar, diziler, metotlar, interfaceler generic olabilir. New'lediğimiz an da çalışan bloğa constructor denir.
+ 
