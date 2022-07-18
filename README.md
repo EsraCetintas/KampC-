@@ -70,3 +70,27 @@ ProductManager manager = new ProductManager();
  
  Koeksiyonlar generik ve generik olmayan olarak 2'ye ayrılır. Generic yapılar her tipe uyum sağlaması için bir şablon oluşturmak için kullanılır. Örneğin List<int> =new List<int>() bu generic yapıalra bir örnektir. Sınıflar, diziler, metotlar, interfaceler generic olabilir. New'lediğimiz an da çalışan bloğa constructor denir.
  
+ #Kamp5
+ 
+ Özellik tuttuğumuz yerde yani prop tuttuğumuz yerde operasyon tutulmaz. Operasyon tutulan yerde özellik tutulmaz.
+ 
+ *** Bir veri üzerinde eğer matematiksel işlem yapılmıyorsa o veri string tutulmalıdır. Örneğin TcNo, müşteri no, vergi no gibi veriler
+ 
+ *** Eğer ki bir nesne de bir değeri kullanmak zorunda gibi görünmüyorsam o nesneye ayit gibi durmuyorsa orda soyutlama hatası vardır deriz. Örneğin bir bankacılık uygulamasında 2 ti müşterin var. Tüzel ve gerçek müşteri. Eğer ki sen bir müşteri nesnesi olşturursan ve bu iki müşteri tipini aynı nesneye koyarsan yanlış olur. Bu teknik SOLID tekniğinde ki L'dir.
+ 
+ 		L — Liskov substitution principle
+ÖZET: Kodlarımızda herhangi bir değişiklik yapmaya gerek duymadan alt sınıfları, türedikleri(üst) sınıfların yerine kullanabilmeliyiz. “Yerine Geçme” olarak Türkçeye çevirdiğimiz prensibe göre; miras alarak türemiş olan class’ların önce miras aldıkları nesnenin tüm özelliklerini kullanması, daha sonra da kendi özelliklerini barındırması gerekir. Eğer oluşturduğumuz class, miras aldığı nesnenin ‘tüm’ özelliklerini kullanmayacaksa ortaya gereksiz kod blokları çıkar ve bu da bir geliştiricinin isteyeceği en son şeydir. Çünkü bir geliştirici her daim ‘Clean Code’ yazmaya çalışır.
+ 
+ Entity sınıfında operasyon yazılmaz.
+ 
+ *** Kalıtımda aslıda olay referans tiptir. Şöyle kalıtım veren sınıf kalıtım alan sınıfın referansını tutabilir. Örneğin her gerçek müşteri bir müşteridir. Müşteri sınıfı burda gerçek müşterinin referansını tutar.
+ 
+ Örneğin Musteri musteri = new Gercekmusteri();
+ 
+ İmza aynı ancak fonksiyon içi yani gövdesi farklıysa interface kullanırız. İnterfacelerde refrans tutuculardır unutma!!!!!
+ 
+C# params nedir?
+Metotların değişken sayıda parametre almasına imkan veren bir anahtar kelimedir. Değişken türü belli olmayan durumlarda C# içerisindeki her şeyin object türünden türediği özelliği kullanılabilir. Bu özellik kullanıldığında metodun aşırı yüklenmiş olduğu varsayılır. C# aşırı yüklenmiş metotları seçerken önceliği normal metotlara verir.
+ 
+ Örneğin int Topla(params int[] sayilar);
+ 
