@@ -93,4 +93,16 @@ C# params nedir?
 Metotların değişken sayıda parametre almasına imkan veren bir anahtar kelimedir. Değişken türü belli olmayan durumlarda C# içerisindeki her şeyin object türünden türediği özelliği kullanılabilir. Bu özellik kullanıldığında metodun aşırı yüklenmiş olduğu varsayılır. C# aşırı yüklenmiş metotları seçerken önceliği normal metotlara verir.
  
  Örneğin int Topla(params int[] sayilar);
+  
+ İnterface, birbirinin alternatifi olan ama kod içeriği farklı imzalara sahip şeyler için kullanılır. Hem şbalon olarak hem de referans tutucu olarak. Aslında interfaclerimiz servis bizim.
+ 
+ Dependency injection
+ Kaba tabir ile bir sınıfın/nesnenin bağımlılıklardan kurtulmasını amaçlayan ve o nesneyi olabildiğince bağımsızlaştıran bir programlama tekniği/prensibidir. Dependency Injection uygulayarak; bir sınıfının bağımlı olduğu nesneden bağımsız hareket edebilmesini sağlayabilir ve kod üzerinde olası geliştirmelere karşın değişiklik yapma ihtiyacını ortadan kaldırabilirsiniz. 
+ 
+ 2 Tip enjection var. Parameter enjection ve constructor enjection.
+ 
+ Tüm bu soyutlama teknikleri yazılmda sürdürülebilirliği sağlar.
+ 
+O — Open-closed principle
+ÖZET: Bir sınıf ya da fonksiyon halihazırda var olan özellikleri korumalı ve değişikliğe izin vermemelidir. Yani davranışını değiştirmiyor olmalı ve yeni özellikler kazanabiliyor olmalıdır.
  
