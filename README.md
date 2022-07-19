@@ -99,10 +99,20 @@ Metotların değişken sayıda parametre almasına imkan veren bir anahtar kelim
  Dependency injection
  Kaba tabir ile bir sınıfın/nesnenin bağımlılıklardan kurtulmasını amaçlayan ve o nesneyi olabildiğince bağımsızlaştıran bir programlama tekniği/prensibidir. Dependency Injection uygulayarak; bir sınıfının bağımlı olduğu nesneden bağımsız hareket edebilmesini sağlayabilir ve kod üzerinde olası geliştirmelere karşın değişiklik yapma ihtiyacını ortadan kaldırabilirsiniz. 
  
+ Dependency Enjection daha çok başka bir servisten bir metot veya metotolar kullanıcaksan yaparız. Hani gidip o metodu implement edeceğimize enjection yaaprız ve o servisi kullanırız.
+ 
  2 Tip enjection var. Parameter enjection ve constructor enjection.
  
  Tüm bu soyutlama teknikleri yazılmda sürdürülebilirliği sağlar.
  
 O — Open-closed principle
 ÖZET: Bir sınıf ya da fonksiyon halihazırda var olan özellikleri korumalı ve değişikliğe izin vermemelidir. Yani davranışını değiştirmiyor olmalı ve yeni özellikler kazanabiliyor olmalıdır.
+
+Bazı programlar yazılırken hata vermediği halde çalışma sırasında hata verebilir. Bu hataları kontrol etme işlemine İstisnai Durum Yönetimi (Exception Handling)denir. .NET mimarisinde sık oluşan hataları yakalamak için gerekli sınıflar System.Exception sınıfı altında bulunmaktadır. Bu sınıfların yetersiz görüldüğü yerde programcı kendi hata sınıfını kendisi de yazabilir. 
+
+eğer ki kod derleme sırasında koşul sağlanamdığında hata alsın isityorsan throw new excepiton(mesaj); yaz.
+
+*** Dış bir servisi adapte ederken adapter tasarım deseni uygulanmalıdır.
  
+***** Bir operasyon sınıfında bir metot yazarken düşün. Bu metot ya da işlev sadece bu sınıfa mı ait. Başka bir operasyon sınıfı kullanabilir mi?
+Örneğin Kulkanıcı giriş yaparken eğer belli bir firma mernis doğrulaması isterken diğer firma istemiyor diyelim. O zaman gidip isteyen firmaya o metodu yazma. Çünkü sonradan diğer firmada isteyebilir. Ya da başka bir firma eklenir. O da isteyebilir. O yüzden interface yap.
