@@ -1,0 +1,97 @@
+Kamp6 
+RDBMS --- İLİŞKİSEL VERİTABANI
+NOSQL --- iLİŞKİSEL OLMAYAN VERİTABANI
+
+RDBMS'e örnek oracle, sql server postqresql, access, mysql örnetiktir. 
+RDBMS'te ANSI SQL standartları kullanılır.
+Normalizasyon standartlarını da benimser.
+
+NOSQL'e MongoDB, Firebase örnektir. Aslında burda da ilişkisellik söz konusudur ama RDBMS'e de ki gibi değil. 
+Loglama altyapıalrında NoSql kullanılır.
+
+Normalizasyon bir veriyi modelleme tekniğidir. Amaç veri kaçaklarını engellemektir.
+Veritabanında nesnelerimizi tutan yapılara tablo denir.
+
+Normalizasyona örnek mesela kişi tablosu yaparken kişinin yaşadığı şehri tablo
+da şehri string olarak tutamassın. Şehirler tablosu yapman lazım. Sonra kişi 
+tablosunda SehirId diye alan tutman lazım.
+
+Tabloda önce tablo id'si sonra diğer tabloalrın id'si gelir.
+
+Tabloda eğer bir satır tekrarlanmasın istersen unique key yap.Primary key zaten
+id'dir. Bir tabloda bir tane primary key olur. O yüzden primary key yapamassın.
+
+Foreign key, bir tabloda başka bir tablonun id'Sini kullanıyprsak o alan foreign 
+key olur. Örneğin yukarıdaki kişi tablosunda SehirId foreign keydir.
+
+Normalizasyon yapılırken 3-3,5ta bırakılır. Daha fazla indirmeye çalışırsak 
+overdesign olur.
+
+Bir veritabanını visual studioda açmak istiyorsan eğer sql scriptini kopyala
+visual studioda sql serverda local db üzerinde new query de. Oraya yapıştır.
+Sonra excute (soldaki yeşil tula bas.) tuşuna bas. Böylece veritabanı eklenicek.
+
+Select * from tablo adı ---> Select'ten sonra kolonlar gelir. * ile tüm kolonları
+getir demek.
+
+Alians, kolon adlarını istediğimiz isimle göstermedir.
+Örneğin Select Name Adi from Customers ---> Name kolona dı ama biz Adi ile gösterilsin istiyoruz
+Select * from Customers Where City='London' ---> Bu bana tüm müşterileri getir ancak
+şehri londra olanları getir diye filtreledik.
+
+Sql, case insensetivedir. Yani büyük-küçük harf duyarlı değildir.
+
+Order by ---> sıralama işlemleri için
+Select * from Products Order By ProductName ---> Ürünleri ürün ismine göre sırala demek.
+Select * from Products order By categoryId, ProductName ---> Ürüneri önce
+categori numarasına göre sırala sonra ürün ismine göre sırala. Böyle default
+asc'dir. Yani artan yani asc'dir. Desc ise azalan demektir.
+
+Select * from Products WHERE categoryId=1 order By UnitPrice desc --->Bu 
+caetgoryId'si 1 olanların  birim fiyatalrını çoktan aza sırala demek.
+
+Select count(*) from Products ---> Satır sayısını ver demek. Bütün tablodaki.
+Select count(*) from Products where categoryId = 2 ----> BU categoryId'de ki
+satır sayısını ver.
+
+Select categoryId from Products group by categoryId ---> Burda bütün kategorileri
+tekrar etmicek şekilde sırala demek. Yani kategorileri gruplandırdık. Group by'dan
+sonra ne yazarsan selectten sonrada o kolon adını yazmalısın. Yani categoryId'si
+1 olanalr bie grup. 2 olanalr bir grup oldu.
+Group by yaparken grupladığın her şey için arkada aslında bir tablo oluyor.
+
+Mesela ürün sayısı 10dan az olan kategorileri sıralayalım. Öncelikle bir kategorideki
+ürün sayısını bulmak için gruplamamız lazım. Bunun içinde group by kullancağımızı
+öğrendik. Sonra filtreleme yapmamız lazım. Çünkü 10dan az olanalrı istiyor. Burda
+filtrelemeyi kümülatif dataya yapmamız alzım. yani where kullanamayız. 
+***Having terimini kullanıcaz. Group by varsa filtreleme havingle olur unutma!!!
+
+Select categoryId,count(*) from Products group by categoryId having count(*)<10
+
+Select categoryId,count(*) from Products where UnitPrice>20 group by categoryId having count(*)<10 ---> Bu
+şu demek. Önce birim fiyatı 20den büyük olanalrı filtrele. Sonra grupla.
+
+JOIN
+Join işlemiyle tabloları birleştiririz.
+İnner join sadece eşleşenleri bir araya getirir.
+
+select * from Products inner join categories on Products.categoryId==categories.categoryId
+* yerine products.productName categories.categoryName diyerek tabloda istediğimiz 
+kolonları gösteririz.
+
+select * from Products inner join categories on Products.categoryId==categories.categoryId where products.UnitPrice>10
+Bu şu demek birim fiyatı 10dan büyük olanları join et.
+
+
+***Sql'de eğer tablo isimleri falan boşluklu 2 kelime şeklindeyse [] bunun içine yazılır.
+
+left JOIN
+left join'de sorgu yazımında sol tabloda olup sağ tabloda olmayan ürünleri de getir demek.
+
+Diyelimki bir e ticaret sitesinde hiç sipariş vermemiş müşterileri görmek istiyorsun 
+o zaman şöyle yazarız : 
+select * from Customers c left join Orders o on c.customerId=o.customerId where o.customersId is null
+Bu null olayı her zaman primary keye uygulanır.
+
+Right JOIN 
+left join'in tam tersidir.
