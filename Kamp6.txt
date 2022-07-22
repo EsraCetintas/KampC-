@@ -95,3 +95,5 @@ Bu null olayı her zaman primary keye uygulanır.
 
 Right JOIN 
 left join'in tam tersidir.
+
+Standart gördüğümüz yerde generic yaparız.
