@@ -116,3 +116,20 @@ eğer ki kod derleme sırasında koşul sağlanamdığında hata alsın isityors
  
 ***** Bir operasyon sınıfında bir metot yazarken düşün. Bu metot ya da işlev sadece bu sınıfa mı ait. Başka bir operasyon sınıfı kullanabilir mi?
 Örneğin Kulkanıcı giriş yaparken eğer belli bir firma mernis doğrulaması isterken diğer firma istemiyor diyelim. O zaman gidip isteyen firmaya o metodu yazma. Çünkü sonradan diğer firmada isteyebilir. Ya da başka bir firma eklenir. O da isteyebilir. O yüzden interface yap.
+
+Projelerimizde framewrok katamnı yaparız. Genel oalrak isimlendirmesi Core olur. .Net Core ile alakası yok. 
+
+*** Katmanlı miamri oluştururken unutma class library .Net Standart kullanırız unutma !!!
+
+ *** Core katmanında hangi katmanla ilgileneceksem o katmanla ilgili klasörleme yaparım. Core katmanı dieğr katmanalrı referans almaz.
+
+NameSpace -- İsim uzayı demektir. NameSpace classlara erişmeyi kolaylaştırır. NameSpace proje ismi.klasör ismi(varsa)
+
+<h2> Debugging/Hata Ayıklama Nedir? </h2>
+Debugging’in, Türkçe karşılığı hata ayıklama demektir. IDE kullanılarak oluşturulan breakpoint’ler aracılığı ile hatanın giderilmesi için yapılan çalışmalara verilen genel addır. Debugging sırasında programın çalışması duraklatılabilir, fonksiyonlar incelenebilir ya da değişken değerleri anlık olarak okunabilir ya da değiştirilebilir.
+
+*** Code refactoring --- Codu'n iğleştirilmesi
+
+Abstract sınıfta absract kelimesi eklediğin metotları kalıtım alan sınıflarda override etmek zorundasın. Ve absract sınıfta fonksiyonları sadece tanımlarsın. Gödesi yazılmaz. 
+
+Örneğin abstract public void ozellikyaz(); bu şekilde. Overrride ettiğin sınıflarda da içeriğini değiştirirsin. Ama normal bir classta diyelim ki bu fonksiyonu oluşturdun ve kalıtım alan her sınıfta işlev ve içerik aynı o zaman normal class kullan.
