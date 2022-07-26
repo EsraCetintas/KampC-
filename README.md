@@ -133,3 +133,5 @@ Debugging’in, Türkçe karşılığı hata ayıklama demektir. IDE kullanılar
 Abstract sınıfta absract kelimesi eklediğin metotları kalıtım alan sınıflarda override etmek zorundasın. Ve absract sınıfta fonksiyonları sadece tanımlarsın. Gödesi yazılmaz. 
 
 Örneğin abstract public void ozellikyaz(); bu şekilde. Overrride ettiğin sınıflarda da içeriğini değiştirirsin. Ama normal bir classta diyelim ki bu fonksiyonu oluşturdun ve kalıtım alan her sınıfta işlev ve içerik aynı o zaman normal class kullan.
+
+DTO ---> Birden fazla modelin birleştirilip tek model oalrak kullanılmasıdır.
